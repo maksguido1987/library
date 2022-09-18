@@ -17,7 +17,7 @@ const Portal: FC<Props> = ({ children }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return ReactDOM.createPortal(children, container);
+  return container ? ReactDOM.createPortal(children, container) : null;
 };
 
 export default Portal;
